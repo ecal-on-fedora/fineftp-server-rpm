@@ -47,12 +47,14 @@ FineFTP library files
 %{_includedir}/fineftp/fineftp_version.h
 %{_includedir}/fineftp/permissions.h
 %{_includedir}/fineftp/server.h
-%{_libdir}/cmake/fineftp/fineftpConfig.cmake
-%{_libdir}/cmake/fineftp/fineftpTargets.cmake
-%{_libdir}/cmake/fineftp/fineftpTargets-release.cmake
+%{_prefix}/lib/cmake/fineftp/fineftpConfig.cmake
+%{_prefix}/lib/cmake/fineftp/fineftpTargets.cmake
+%{_prefix}/lib/cmake/fineftp/fineftpTargets-release.cmake
 
 %files libs 
-%{_libdir}/libfineftp-server.a
+%{_prefix}/lib/libfineftp-server.so.1.3.3
+%{_prefix}/lib/libfineftp-server.so.1
+%{_prefix}/lib/libfineftp-server.so
 
 %files
 %license LICENSE
