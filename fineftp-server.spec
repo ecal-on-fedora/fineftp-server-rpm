@@ -5,7 +5,7 @@
 
 Name:    fineftp-server
 Version: 1.3.3
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: FineFTP is a minimal FTP server library for Windows and Unix flavors.
 URL:     %{forgeurl}
 Source:  %{forgesource}
@@ -22,6 +22,7 @@ You can easily embed this library into your own project in order to create an em
 
 %package devel
 Summary: FineFTP development header and cmake files
+Requires: %{name}-libs
 
 %description devel
 FineFTP development header and cmake files
@@ -61,5 +62,8 @@ FineFTP library files
 %doc README.md
 
 %changelog
+* Mon Jan 23 2023 Leonardo Rossetti <lrossett@redhat.com> - 1.3.3-2
+- Adding dependency for devel sub-package
+
 * Sat Jan 21 2023 Leonardo Rossetti <lrossett@redhat.com> - 1.3.3-1
 - First version being packaged
